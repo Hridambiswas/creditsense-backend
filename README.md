@@ -10,6 +10,24 @@
 
 ---
 
+## Analysis Graphs
+
+Run from the repo root (requires `matplotlib`, `numpy`, `scipy`, `scikit-learn`):
+
+```bash
+python graphs/roc_curves.py          # ROC comparison: LR vs RF vs GBM
+python graphs/feature_importance.py  # GBM feature importance bar chart
+python graphs/score_distribution.py  # Risk score KDE by default/non-default class
+```
+
+| Script | What it shows |
+|---|---|
+| `roc_curves.py` | ROC curves and AUC for all three ensemble models |
+| `feature_importance.py` | Normalised feature importances from the GBM model |
+| `score_distribution.py` | KDE of predicted risk scores split by applicant outcome |
+
+---
+
 ## What It Does
 
 CreditSense takes three applicant inputs — **age, monthly income, and debt-to-income ratio** — and returns a credit score (0–100), a risk tier, and a plain-language explanation of the key risk drivers.
